@@ -131,6 +131,7 @@ button { font: inherit; }
 .profile-controls { display: flex; justify-content: center; align-items: center; gap: 5px; }
 .social-icons { margin-top: .75rem; }
 .social-icons a,
+.social-icons button,
 .profile-controls button {
   display: inline-grid;
   width: 2.4rem;
@@ -143,7 +144,10 @@ button { font: inherit; }
 }
 .social-icons a { font-size: 1.2rem; }
 .profile-controls button { height: 1.85rem; padding: 0; cursor: pointer; font-size: .88rem; white-space: nowrap; }
+.social-icons button { padding: 0; cursor: pointer; }
+.copy-status { font-size: .85rem; }
 .social-icons a:hover,
+.social-icons button:hover,
 .profile-controls button:hover { color: var(--link-hover); }
 .github-icon { font-family: "Font Awesome Brands"; }
 .social-icons svg,
