@@ -3,6 +3,7 @@ const themeToggle = document.querySelector('#theme-toggle');
 const languageToggle = document.querySelector('#language-toggle');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
+const header = document.querySelector('.site-header');
 const backToTop = document.querySelector('.back-to-top');
 
 const storedTheme = localStorage.getItem('ziyi-theme');
@@ -26,7 +27,10 @@ function setLanguage(nextLanguage) {
   document.querySelectorAll('[data-lang]').forEach((element) => {
     element.hidden = element.dataset.lang !== language;
   });
-  if (languageToggle) languageToggle.textContent = language === 'zh' ? 'EN' : '中文';
+  if (languageToggle) {
+    languageToggle.textContent = language === 'zh' ? 'EN' : '中文';
+    languageToggle.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
+  }
   localStorage.setItem('ziyi-language', language);
 }
 
@@ -38,27 +42,61 @@ menuToggle?.addEventListener('click', () => {
   menuToggle.setAttribute('aria-expanded', String(open));
 });
 
-nav?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
-  });
-});
+function closeMenu() {
+  nav?.classList.remove('open');
+  menuToggle?.setAttribute('aria-expanded', 'false');
+}
 
 const navLinks = [...document.querySelectorAll('#site-nav a[href^="#"]')];
-const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-const observer = new IntersectionObserver((entries) => {
-  const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-  if (!visible) return;
-  navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`));
-}, { rootMargin: '-18% 0px -68% 0px', threshold: [0, .2, .5] });
+const navSections = navLinks.map((link) => document.getElementById(link.hash.slice(1)));
 
-sections.forEach((section) => observer.observe(section));
+navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && nav?.classList.contains('open')) {
+    closeMenu();
+    menuToggle?.focus();
+  }
+});
 
-function updateBackToTop() {
+function updateNavigation() {
+  const sectionStart = (header?.getBoundingClientRect().bottom ?? 0) + 20;
+  let currentSection = navSections[0];
+
+  for (const section of navSections) {
+    if (section && section.getBoundingClientRect().top <= sectionStart) currentSection = section;
+  }
+
+  const hashTarget = document.getElementById(window.location.hash.slice(1));
+  const linkedSection = hashTarget?.closest('.content-section, .hero');
+  const atPageEnd = Math.ceil(window.scrollY + window.innerHeight) >= root.scrollHeight;
+
+  // Short sections near the footer cannot always scroll up to the sticky header.
+  if (atPageEnd && window.scrollY > 0) {
+    const bounds = hashTarget?.getBoundingClientRect();
+    currentSection = bounds && bounds.top >= sectionStart && bounds.top < window.innerHeight
+      ? linkedSection
+      : navSections.at(-1);
+  }
+
+  navLinks.forEach((link, index) => {
+    if (navSections[index] === currentSection) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
   backToTop?.classList.toggle('visible', window.scrollY > 420);
 }
 
-window.addEventListener('scroll', updateBackToTop, { passive: true });
-updateBackToTop();
-backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+window.addEventListener('scroll', updateNavigation, { passive: true });
+window.addEventListener('resize', updateNavigation);
+window.addEventListener('hashchange', updateNavigation);
+window.addEventListener('load', updateNavigation, { once: true });
+document.fonts?.ready.then(updateNavigation);
+languageToggle?.addEventListener('click', updateNavigation);
+updateNavigation();
+backToTop?.addEventListener('click', () => {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+  document.querySelector('#name-heading')?.focus({ preventScroll: true });
+  window.scrollTo({ top: 0 });
+});

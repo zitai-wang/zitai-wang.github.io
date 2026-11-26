@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ziyi Wang — Master's candidate at Southeast University researching reasoning vectors in language and multimodal models." />
+  <meta name="description" content="Ziyi Wang — Master's student at Southeast University researching reasoning vectors in language and multimodal models." />
   <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Ziyi Wang — Academic Homepage" />
   <meta property="og:description" content="Research on reasoning vectors, LLM reasoning mechanisms, and multimodal reasoning." />
@@ -28,10 +28,10 @@
       <nav id="site-nav" aria-label="Main navigation">
         <a href="#about"><span data-lang="en">About</span><span data-lang="zh" hidden>关于</span></a>
         <a href="#news"><span data-lang="en">News</span><span data-lang="zh" hidden>动态</span></a>
+        <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh" hidden>论文</span></a>
         <a href="#education"><span data-lang="en">Education</span><span data-lang="zh" hidden>教育</span></a>
         <a href="#research"><span data-lang="en">Research</span><span data-lang="zh" hidden>研究</span></a>
-        <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh" hidden>论文</span></a>
-        <a href="#service"><span data-lang="en">Service</span><span data-lang="zh" hidden>交流</span></a>
+        <a href="#service"><span data-lang="en">Contact</span><span data-lang="zh" hidden>联系</span></a>
         <button class="nav-text-button" id="language-toggle" type="button" aria-label="Switch language">中文</button>
         <button class="theme-button" id="theme-toggle" type="button" aria-label="Switch color theme">
           <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
@@ -43,78 +43,112 @@
 
   <main class="page-shell">
     <section class="hero" id="about" aria-labelledby="name-heading">
-      <div class="hero-copy">
-        <div class="identity">
-          <h1 id="name-heading">Ziyi Wang <span aria-hidden="true">·</span> <b>王子怡</b></h1>
-          <p class="motto"><span data-lang="en">Reasoning, represented and transferred.</span><span data-lang="zh" hidden>理解推理，表征推理，迁移推理。</span></p>
-          <div class="social-links" aria-label="Profile links">
-            <a href="mailto:2531131993@qq.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7"></path></svg></a>
-            <a href="https://github.com/zitai-wang" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5v-2.2c-2.6.6-3.2-1.1-3.2-1.1-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.1-.2-4.3-1-4.3-4.7 0-1 .4-1.9 1-2.6-.1-.3-.4-1.2.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 4.9 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.3.1 2.6.7.7 1 1.6 1 2.6 0 3.7-2.2 4.5-4.3 4.7.4.3.7.9.7 1.8v3A10 10 0 0 0 12 2Z"></path></svg></a>
-            <a href="https://scholar.google.com/citations?user=Qaw1YcoAAAAJ&amp;hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Zm3 2.2V16c3.2 2.7 8.8 2.7 12 0v-4.8M20 10v7"></path></svg></a>
-            <a href="https://arxiv.org/search/?query=Ziyi+Wang&amp;searchtype=author" target="_blank" rel="noreferrer" aria-label="arXiv" title="arXiv"><span class="arxiv-mark">arXiv</span></a>
+      <div class="profile">
+        <img class="portrait" src="assets/ziyi-wang-portrait.jpg" alt="Ziyi Wang" width="960" height="1282" />
+        <div>
+          <h1 id="name-heading" tabindex="-1">Ziyi Wang <span lang="zh-CN">王子怡</span></h1>
+          <p class="affiliation">
+            <span data-lang="en">Master’s Student<br />Southeast University</span>
+            <span data-lang="zh" hidden>硕士研究生<br />东南大学</span>
+          </p>
+          <div class="social-links">
+            <a href="mailto:2531131993@qq.com"><span data-lang="en">Email</span><span data-lang="zh" hidden>邮箱</span></a>
+            <a href="https://github.com/zitai-wang">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=Qaw1YcoAAAAJ&amp;hl=en">Google Scholar</a>
           </div>
         </div>
-        <div class="bio">
-          <p><span data-lang="en">I am a master's student in the <a href="https://palm.seu.edu.cn/intro.html" target="_blank" rel="noreferrer">PALM Lab</a> at <a href="https://www.seu.edu.cn/english/" target="_blank" rel="noreferrer">Southeast University</a>, advised by Prof. Xu Yang. My research interests lie in understanding the reasoning mechanisms of large language models and vision-language models.</span><span data-lang="zh" hidden>我是东南大学 <a href="https://palm.seu.edu.cn/intro.html" target="_blank" rel="noreferrer">PALM 实验室</a>硕士研究生，导师为杨旭教授。我的研究兴趣主要在于理解大语言模型与视觉语言模型的推理机制。</span></p>
-          <p><span data-lang="en">Specifically, I study how reasoning is represented within these models and how such representations can be transferred across tasks and modalities through lightweight activation interventions.</span><span data-lang="zh" hidden>具体而言，我关注模型内部如何表征推理，以及如何通过轻量级激活干预，使这些表征能够跨任务、跨模态迁移。</span></p>
-          <p><span data-lang="en">My recent work on <strong>reasoning vectors</strong> appears at ICLR 2026 and NeurIPS 2026, both CCF-A conferences. I am always happy to discuss research and explore collaborations in language and multimodal reasoning.</span><span data-lang="zh" hidden>我近期关于<strong>推理向量</strong>的工作发表于 ICLR 2026 和 NeurIPS 2026，两者均为 CCF-A 会议。欢迎围绕语言与多模态推理开展学术交流与合作。</span></p>
-        </div>
       </div>
-      <figure class="portrait"><img src="assets/ziyi-wang-portrait.jpg" alt="Portrait of Ziyi Wang" width="960" height="1282" /></figure>
+      <div class="bio">
+        <h2 class="section-title"><span data-lang="en">About Me</span><span data-lang="zh" hidden>个人简介</span></h2>
+        <p>
+          <span data-lang="en">I am a master’s student in the <a href="https://palm.seu.edu.cn/intro.html">PALM Lab</a> at Southeast University, advised by <a href="https://yxpalmweb.github.io/">Prof. Xu Yang</a>. I study how large language models and vision-language models represent reasoning internally.</span>
+          <span data-lang="zh" hidden>我是东南大学 <a href="https://palm.seu.edu.cn/intro.html">PALM 实验室</a>的硕士研究生，导师是<a href="https://yxpalmweb.github.io/">杨旭教授</a>。我研究大语言模型与视觉语言模型如何在内部表征推理过程。</span>
+        </p>
+        <p>
+          <span data-lang="en">My recent work explores how reasoning vectors transfer across tasks and modalities through lightweight activation interventions.</span>
+          <span data-lang="zh" hidden>我近期的工作探索如何通过轻量级激活干预，将推理向量迁移到不同任务和模态。</span>
+        </p>
+      </div>
     </section>
 
     <section class="content-section" id="news" aria-labelledby="news-title">
-      <h2 id="news-title"><span class="section-emoji" aria-hidden="true">👀</span><span data-lang="en">News</span><span data-lang="zh" hidden>最新动态</span></h2>
-      <div class="news-list">
-        <article class="news-row"><time datetime="2026">2026</time><span class="tag">Research</span><p><span data-lang="en"><strong>LIFT</strong> has been accepted to <a href="https://arxiv.org/abs/2609.31140" target="_blank" rel="noreferrer">NeurIPS 2026</a>.</span><span data-lang="zh" hidden><strong>LIFT</strong> 已被 <a href="https://arxiv.org/abs/2609.31140" target="_blank" rel="noreferrer">NeurIPS 2026</a> 接收。</span></p></article>
-        <article class="news-row"><time datetime="2026">2026</time><span class="tag">Research</span><p><span data-lang="en"><strong>CoT Vectors</strong> was published at <a href="https://arxiv.org/abs/2510.00579" target="_blank" rel="noreferrer">ICLR 2026</a>.</span><span data-lang="zh" hidden><strong>CoT Vectors</strong> 发表于 <a href="https://arxiv.org/abs/2510.00579" target="_blank" rel="noreferrer">ICLR 2026</a>。</span></p></article>
-        <article class="news-row"><time datetime="2026">2026</time><span class="tag">Open Source</span><p><span data-lang="en">The implementation of <a href="https://github.com/zitai-wang/lift" target="_blank" rel="noreferrer">LIFT</a> is now available on GitHub.</span><span data-lang="zh" hidden><a href="https://github.com/zitai-wang/lift" target="_blank" rel="noreferrer">LIFT</a> 的实现代码现已在 GitHub 开源。</span></p></article>
+      <h2 class="section-title" id="news-title"><span data-lang="en">News</span><span data-lang="zh" hidden>最新动态</span></h2>
+      <ul class="news-list">
+        <li class="news-row">
+          <time datetime="2026">2026</time>
+          <p><span data-lang="en"><a href="#lift">LIFT</a> was accepted to NeurIPS 2026.</span><span data-lang="zh" hidden><a href="#lift">LIFT</a> 已被 NeurIPS 2026 接收。</span></p>
+        </li>
+        <li class="news-row">
+          <time datetime="2026">2026</time>
+          <p><span data-lang="en"><a href="#cot-vectors">CoT Vectors</a> was published at ICLR 2026.</span><span data-lang="zh" hidden><a href="#cot-vectors">CoT Vectors</a> 发表于 ICLR 2026。</span></p>
+        </li>
+        <li class="news-row">
+          <time datetime="2026">2026</time>
+          <p><span data-lang="en">The <a href="https://github.com/zitai-wang/lift">LIFT code</a> is available on GitHub.</span><span data-lang="zh" hidden><a href="https://github.com/zitai-wang/lift">LIFT 代码</a>已在 GitHub 开源。</span></p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section" id="publications" aria-labelledby="publications-title">
+      <h2 class="section-title" id="publications-title"><span data-lang="en">Selected Publications</span><span data-lang="zh" hidden>代表论文</span></h2>
+      <div class="paper-list">
+        <article class="paper-row" id="lift" aria-labelledby="lift-title">
+          <div class="paper-thumb"><img src="assets/papers/lift-method.png" alt="LIFT method overview" /></div>
+          <div class="paper-copy">
+            <h3 id="lift-title"><a href="https://neurips.cc/virtual/2026/poster/155152">Can Linguistic Reasoning Vectors Enhance Multimodal Reasoning Ability?</a></h3>
+            <p class="authors"><strong>Ziyi Wang</strong>, Li Li, Aolin Zhou, Yankun Shen, Chonghan Liu, Shuxia Lin, Xu Yang</p>
+            <p class="venue">NeurIPS 2026 <span class="venue-rank">CCF-A</span></p>
+            <p class="paper-links">
+              <a href="https://arxiv.org/pdf/2609.31140" aria-label="LIFT PDF">PDF</a>
+              <a href="https://arxiv.org/abs/2609.31140">arXiv</a>
+              <a href="https://github.com/zitai-wang/lift"><span data-lang="en">Code</span><span data-lang="zh" hidden>代码</span></a>
+            </p>
+          </div>
+        </article>
+        <article class="paper-row" id="cot-vectors" aria-labelledby="cot-vectors-title">
+          <div class="paper-thumb"><img src="assets/papers/cot-vectors-method.png" alt="CoT Vectors method overview" /></div>
+          <div class="paper-copy">
+            <h3 id="cot-vectors-title"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/b0d4b9d3dc41b36cad1d36ddd27858ab-Abstract-Conference.html">CoT Vectors: Transferring and Probing the Reasoning Mechanisms of LLMs</a></h3>
+            <p class="authors">Li Li, <strong>Ziyi Wang</strong>, Yongliang Wu, Jianfei Cai, Xu Yang</p>
+            <p class="venue">ICLR 2026 <span class="venue-rank">CCF-A</span></p>
+            <p class="paper-links">
+              <a href="https://openreview.net/pdf?id=L1FUfBCL0c" aria-label="CoT Vectors PDF">PDF</a>
+              <a href="https://arxiv.org/abs/2510.00579">arXiv</a>
+              <a href="https://github.com/zitai-wang/task_vector_skill"><span data-lang="en">Task Vector Skill</span><span data-lang="zh" hidden>任务向量工具</span></a>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="content-section" id="education" aria-labelledby="education-title">
-      <h2 id="education-title"><span class="section-emoji" aria-hidden="true">🎓</span><span data-lang="en">Education Experience</span><span data-lang="zh" hidden>教育经历</span></h2>
+      <h2 class="section-title" id="education-title"><span data-lang="en">Education</span><span data-lang="zh" hidden>教育经历</span></h2>
       <div class="experience-grid education-grid">
-        <article class="experience-card"><img class="institution-logo" src="assets/institutions/seu-logo.png" alt="Southeast University logo" /><div><h3><span data-lang="en">Southeast University</span><span data-lang="zh" hidden>东南大学</span></h3><p><span data-lang="en">Master's Candidate · PALM Lab</span><span data-lang="zh" hidden>硕士研究生 · PALM 实验室</span></p><span class="experience-meta"><span data-lang="en">Nanjing, China</span><span data-lang="zh" hidden>中国 · 南京</span></span></div></article>
+        <article class="experience-card"><img class="institution-logo" src="assets/institutions/seu-logo.png" alt="Southeast University logo" /><div><h3><span data-lang="en">Southeast University</span><span data-lang="zh" hidden>东南大学</span></h3><p><span data-lang="en">Master’s Student · PALM Lab</span><span data-lang="zh" hidden>硕士研究生 · PALM 实验室</span></p><span class="experience-meta"><span data-lang="en">Nanjing, China</span><span data-lang="zh" hidden>中国 · 南京</span></span></div></article>
       </div>
     </section>
 
     <section class="content-section" id="research" aria-labelledby="research-title">
-      <h2 id="research-title"><span class="section-emoji" aria-hidden="true">🔬</span><span data-lang="en">Research Experience</span><span data-lang="zh" hidden>研究经历</span></h2>
+      <h2 class="section-title" id="research-title"><span data-lang="en">Research Experience</span><span data-lang="zh" hidden>研究经历</span></h2>
       <div class="experience-grid research-grid">
         <article class="experience-card"><img class="institution-logo" src="assets/institutions/palm-logo.png" alt="PALM Lab logo" /><div><h3>PALM Lab @ SEU</h3><p><span data-lang="en">Master's Student</span><span data-lang="zh" hidden>硕士研究生</span></p><span class="experience-meta"><span data-lang="en">Advised by Prof. Xu Yang</span><span data-lang="zh" hidden>导师：杨旭教授</span></span></div></article>
         <article class="experience-card"><img class="institution-logo research-icon" src="assets/reasoning-vectors.svg" alt="Reasoning vectors research icon" /><div><h3><span data-lang="en">Reasoning Vectors</span><span data-lang="zh" hidden>推理向量</span></h3><p><span data-lang="en">Language &amp; multimodal models</span><span data-lang="zh" hidden>语言模型与多模态模型</span></p><span class="experience-meta"><span data-lang="en">Mechanism · Transfer · Intervention</span><span data-lang="zh" hidden>机制 · 迁移 · 干预</span></span></div></article>
       </div>
 
       <div class="subsection research-summary">
-        <h2><span class="section-emoji" aria-hidden="true">🧭</span><span data-lang="en">Research Summary</span><span data-lang="zh" hidden>研究概览</span></h2>
+        <h2 class="section-title"><span data-lang="en">Research Summary</span><span data-lang="zh" hidden>研究概览</span></h2>
         <p class="summary-intro"><span data-lang="en">I study how reasoning is represented inside generative models, and how those representations can be reused across tasks and modalities.</span><span data-lang="zh" hidden>我研究生成式模型内部如何表征推理，以及这些表征如何跨任务、跨模态复用。</span></p>
         <div class="timeline">
-          <article class="timeline-item"><div class="timeline-meta"><strong>2025–2026</strong></div><div><h3>CoT Vectors</h3><p><span data-lang="en">We represent task-general, multi-step reasoning as compact vectors. Extracted and learnable variants transfer reasoning efficiently and reveal a layer-wise, three-stage organization inside LLMs.</span><span data-lang="zh" hidden>我们将任务通用的多步推理表征为紧凑向量。提取式与可学习式向量能够高效迁移推理能力，并揭示大模型内部具有层间差异的三阶段组织结构。</span></p></div></article>
-          <article class="timeline-item"><div class="timeline-meta"><strong>2026–Present</strong></div><div><h3>LIFT</h3><p><span data-lang="en">We transfer linguistic Reasoning Vectors from a base LLM into its frozen vision-language counterpart. Evaluation across two VLMs and six benchmarks studies whether language-side reasoning survives multimodal scaling.</span><span data-lang="zh" hidden>我们将基础语言模型中的语言推理向量迁移到其冻结的视觉语言模型中，并在两个 VLM 与六个基准上研究语言侧推理在多模态扩展后能否继续发挥作用。</span></p></div></article>
+          <article class="timeline-item"><p class="timeline-meta">2025–2026</p><div><h3><a href="#cot-vectors">CoT Vectors</a></h3><p><span data-lang="en">We represent task-general, multi-step reasoning as compact vectors. Extracted and learnable variants transfer reasoning efficiently and reveal a layer-wise, three-stage organization inside LLMs.</span><span data-lang="zh" hidden>我们将任务通用的多步推理表征为紧凑向量。提取式与可学习式向量能够高效迁移推理能力，并揭示大模型内部具有层间差异的三阶段组织结构。</span></p></div></article>
+          <article class="timeline-item"><p class="timeline-meta"><span data-lang="en">2026–Present</span><span data-lang="zh" hidden>2026 年至今</span></p><div><h3><a href="#lift">LIFT</a></h3><p><span data-lang="en">We transfer linguistic Reasoning Vectors from a base LLM into its frozen vision-language counterpart. Evaluation across two VLMs and six benchmarks studies whether language-side reasoning survives multimodal scaling.</span><span data-lang="zh" hidden>我们将基础语言模型中的语言推理向量迁移到其冻结的视觉语言模型中，并在两个 VLM 与六个基准上研究语言侧推理在多模态扩展后能否继续发挥作用。</span></p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="content-section publications" id="publications" aria-labelledby="publications-title">
-      <h2 id="publications-title"><span class="section-emoji" aria-hidden="true">📖</span><span data-lang="en">Selected Publications</span><span data-lang="zh" hidden>代表论文</span></h2>
-      <div class="publication-summary"><p><strong>2</strong> <span data-lang="en">CCF-A papers</span><span data-lang="zh" hidden>篇 CCF-A 论文</span></p><a href="https://scholar.google.com/citations?user=Qaw1YcoAAAAJ&amp;hl=en" target="_blank" rel="noreferrer"><span data-lang="en">Google Scholar</span><span data-lang="zh" hidden>谷歌学术</span></a></div>
-      <div class="paper-list">
-        <article class="paper-row">
-          <a class="paper-thumb" href="https://arxiv.org/abs/2510.00579" target="_blank" rel="noreferrer" aria-label="View CoT Vectors paper"><img src="assets/papers/cot-vectors-method.png" alt="CoT Vectors method overview from the paper" /></a>
-          <div class="paper-copy"><h3>CoT Vectors: Transferring and Probing the Reasoning Mechanisms of LLMs</h3><p class="authors">Li Li, <strong>Ziyi Wang</strong>, Yongliang Wu, Jianfei Cai, Xu Yang</p><p class="venue"><strong>ICLR 2026</strong><span>International Conference on Learning Representations</span><b>CCF-A</b></p><div class="paper-links"><a href="https://arxiv.org/abs/2510.00579" target="_blank" rel="noreferrer">ARXIV</a><a href="https://arxiv.org/pdf/2510.00579" target="_blank" rel="noreferrer">PDF</a><a href="https://github.com/zitai-wang/task_vector_skill" target="_blank" rel="noreferrer">CODE</a></div></div>
-        </article>
-        <article class="paper-row">
-          <a class="paper-thumb" href="https://arxiv.org/abs/2609.31140" target="_blank" rel="noreferrer" aria-label="View LIFT paper"><img src="assets/papers/lift-method.png" alt="LIFT method overview from the paper" /></a>
-          <div class="paper-copy"><h3>Can Linguistic Reasoning Vectors Enhance Multimodal Reasoning Ability?</h3><p class="authors"><strong>Ziyi Wang</strong>, Li Li, Aolin Zhou, Yankun Shen, Chonghan Liu, Shuxia Lin, Xu Yang</p><p class="venue"><strong>NeurIPS 2026</strong><span>Advances in Neural Information Processing Systems</span><b>CCF-A</b></p><p class="paper-note">LIFT — Linguistic reasoning transfer for frozen vision-language models.</p><div class="paper-links"><a href="https://arxiv.org/abs/2609.31140" target="_blank" rel="noreferrer">ARXIV</a><a href="https://arxiv.org/pdf/2609.31140" target="_blank" rel="noreferrer">PDF</a><a href="https://github.com/zitai-wang/lift" target="_blank" rel="noreferrer">CODE</a></div></div>
-        </article>
-      </div>
-    </section>
-
     <section class="content-section service" id="service" aria-labelledby="service-title">
-      <h2 id="service-title"><span class="section-emoji" aria-hidden="true">💬</span><span data-lang="en">Research &amp; Collaboration</span><span data-lang="zh" hidden>研究交流与合作</span></h2>
+      <h2 class="section-title" id="service-title"><span data-lang="en">Research &amp; Collaboration</span><span data-lang="zh" hidden>研究交流与合作</span></h2>
       <p><span data-lang="en">I am open to research discussions and collaboration on reasoning mechanisms, activation intervention, and multimodal intelligence. The easiest way to reach me is by email.</span><span data-lang="zh" hidden>欢迎围绕推理机制、激活干预与多模态智能展开研究交流与合作。你可以通过邮件联系我。</span></p>
-      <a class="email-link" href="mailto:2531131993@qq.com">2531131993@qq.com</a>
+      <a href="mailto:2531131993@qq.com">2531131993@qq.com</a>
     </section>
   </main>
 
