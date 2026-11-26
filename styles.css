@@ -197,6 +197,8 @@ html[data-theme="dark"] .profile-controls .sun-icon { display: block; }
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 180 / 104;
+  object-fit: contain;
   border-radius: 7px;
   background: #fff;
   box-shadow: 2px 2px 5px rgb(0 0 0 / 25%);
