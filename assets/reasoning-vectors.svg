@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Reasoning vectors</title>
+  <g fill="none" stroke="#245a81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="15" cy="18" r="4"/><circle cx="45" cy="12" r="4"/><circle cx="50" cy="43" r="4"/><circle cx="18" cy="48" r="4"/>
+    <path d="M19 17.4 41 12.8M47 16l2.4 23M46.4 45.2l-24.2 2.2M18.3 44l-2.4-22"/><path d="m29 27 11 5-11 5z"/><path d="M22 18.5 37 29M42 35l5 5M22 45l7-8" stroke-dasharray="3 4"/>
+  </g>
+</svg>
