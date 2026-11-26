@@ -1,9 +1,6 @@
 const root = document.documentElement;
 const languageToggle = document.querySelector('#language-toggle');
 const themeToggle = document.querySelector('#theme-toggle');
-const copyEmail = document.querySelector('#copy-email');
-const emailLink = document.querySelector('#profile-email');
-const emailCopyStatus = document.querySelector('#email-copy-status');
 const themeColor = document.querySelector('meta[name="theme-color"]');
 const systemTheme = matchMedia('(prefers-color-scheme: dark)');
 
@@ -31,8 +28,6 @@ function setLanguage(language) {
   });
   languageToggle.textContent = chinese ? 'EN' : '中文';
   languageToggle.setAttribute('aria-label', chinese ? 'Switch to English' : '切换到中文');
-  emailCopyStatus.textContent = '';
-  copyEmail.title = chinese ? '复制邮箱地址' : 'Copy email address';
   updateThemeLabel();
 }
 
@@ -70,15 +65,4 @@ themeToggle.addEventListener('click', () => {
 
 systemTheme.addEventListener('change', ({ matches }) => {
   if (!themeOverride) setTheme(matches ? 'dark' : 'light');
-});
-
-copyEmail.addEventListener('click', async () => {
-  emailCopyStatus.textContent = '';
-  const chinese = root.lang === 'zh-CN';
-  try {
-    await navigator.clipboard.writeText(emailLink.textContent.trim());
-    emailCopyStatus.textContent = chinese ? '邮箱地址已复制' : 'Email address copied';
-  } catch {
-    emailCopyStatus.textContent = chinese ? '请手动复制上方邮箱地址' : 'Copy the email address shown above';
-  }
 });
