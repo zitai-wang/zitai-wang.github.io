@@ -106,18 +106,13 @@ button { font: inherit; }
 .avatar { margin: 0 auto .9rem; padding: 20px 0; }
 .avatar img {
   display: block;
-  width: 104.4px;
+  width: 124px;
   height: auto;
   aspect-ratio: 1;
   margin: 0 auto;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 32%;
-}
-.site-profile h1 span {
-  display: block;
-  margin-top: .25em;
-  font-size: 1.15rem;
 }
 .position { font-size: .98rem; }
 .affiliation { font-size: .95rem; }
@@ -246,7 +241,7 @@ html[data-theme="dark"] .profile-controls .sun-icon { display: block; }
 }
 
 @media screen and (max-width: 480px) {
-  .avatar img { width: 95px; }
+  .avatar img { width: 110px; }
   .news-item { grid-template-columns: 1fr; gap: .15rem; }
   .pub-row { grid-template-columns: minmax(0, 1fr); gap: .65rem; padding-inline: 0; }
   .abbr { width: min(180px, 100%); }
