@@ -59,6 +59,7 @@ p, ul, ol { margin: 0 0 20px; }
 a { color: var(--link); text-decoration: none; }
 a:hover { color: var(--link-hover); }
 strong { color: var(--strong); font-weight: 500; }
+.bio strong { font-weight: 600; }
 img { max-width: 100%; }
 button { font: inherit; }
 :focus-visible { outline: 2px solid var(--theme); outline-offset: 3px; }
