@@ -117,6 +117,7 @@ button { font: inherit; }
   height: 100%;
   object-fit: cover;
   object-position: center 32%;
+  filter: brightness(1.16);
   transform: scale(1.25);
   transform-origin: 45% 37%;
 }
