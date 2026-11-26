@@ -13,8 +13,8 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;family=Noto+Serif+SC:wght@500;600&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261126-publications" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&amp;family=Noto+Serif+SC:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261126-typography" />
   <script src="script.js" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ziyi Wang","alternateName":"王子怡","url":"https://zitai-wang.github.io/","affiliation":{"@type":"CollegeOrUniversity","name":"Southeast University"},"sameAs":["https://github.com/zitai-wang","https://scholar.google.com/citations?user=Qaw1YcoAAAAJ&hl=en"],"knowsAbout":["Reasoning vectors","Large language models","Multimodal reasoning"]}</script>
 </head>
@@ -63,12 +63,12 @@
       <div class="bio">
         <h2 class="section-title"><span data-lang="en">About Me</span><span data-lang="zh" hidden>个人简介</span></h2>
         <p>
-          <span data-lang="en">I am a master’s student in the <a href="https://palm.seu.edu.cn/intro.html">PALM Lab</a> at Southeast University, advised by <a href="https://yxpalmweb.github.io/">Prof. Xu Yang</a>. I study how large language models and vision-language models represent reasoning internally.</span>
-          <span data-lang="zh" hidden>我是东南大学 <a href="https://palm.seu.edu.cn/intro.html">PALM 实验室</a>的硕士研究生，导师是<a href="https://yxpalmweb.github.io/">杨旭教授</a>。我研究大语言模型与视觉语言模型如何在内部表征推理过程。</span>
+          <span data-lang="en">I am a master’s student in the <a href="https://palm.seu.edu.cn/intro.html">PALM Lab</a> at Southeast University, advised by <a href="https://yxpalmweb.github.io/">Prof. Xu Yang</a>.</span>
+          <span data-lang="zh" hidden>我是东南大学 <a href="https://palm.seu.edu.cn/intro.html">PALM 实验室</a>的硕士研究生，导师是<a href="https://yxpalmweb.github.io/">杨旭教授</a>。</span>
         </p>
         <p>
-          <span data-lang="en">My recent work explores how reasoning vectors transfer across tasks and modalities through lightweight activation interventions.</span>
-          <span data-lang="zh" hidden>我近期的工作探索如何通过轻量级激活干预，将推理向量迁移到不同任务和模态。</span>
+          <span data-lang="en">I study how reasoning is represented in large language models and vision-language models. My recent work uses lightweight activation interventions to explore how reasoning vectors transfer across tasks and modalities.</span>
+          <span data-lang="zh" hidden>我的研究关注大语言模型和视觉语言模型中的推理表征。近期，我通过轻量级激活干预探索推理向量如何在不同任务和模态之间迁移。</span>
         </p>
       </div>
     </section>
@@ -83,10 +83,6 @@
         <li class="news-row">
           <time datetime="2026">2026</time>
           <p><span data-lang="en"><a href="#cot-vectors">CoT Vectors</a> was published at ICLR 2026.</span><span data-lang="zh" hidden><a href="#cot-vectors">CoT Vectors</a> 发表于 ICLR 2026。</span></p>
-        </li>
-        <li class="news-row">
-          <time datetime="2026">2026</time>
-          <p><span data-lang="en">The <a href="https://github.com/zitai-wang/lift">LIFT code</a> is available on GitHub.</span><span data-lang="zh" hidden><a href="https://github.com/zitai-wang/lift">LIFT 代码</a>已在 GitHub 开源。</span></p>
         </li>
       </ul>
     </section>
@@ -131,19 +127,11 @@
     </section>
 
     <section class="content-section" id="research" aria-labelledby="research-title">
-      <h2 class="section-title" id="research-title"><span data-lang="en">Research Experience</span><span data-lang="zh" hidden>研究经历</span></h2>
-      <div class="experience-grid research-grid">
-        <article class="experience-card"><img class="institution-logo" src="assets/institutions/palm-logo.png" alt="PALM Lab logo" /><div><h3>PALM Lab @ SEU</h3><p><span data-lang="en">Master's Student</span><span data-lang="zh" hidden>硕士研究生</span></p><span class="experience-meta"><span data-lang="en">Advised by Prof. Xu Yang</span><span data-lang="zh" hidden>导师：杨旭教授</span></span></div></article>
-        <article class="experience-card"><img class="institution-logo research-icon" src="assets/reasoning-vectors.svg" alt="Reasoning vectors research icon" /><div><h3><span data-lang="en">Reasoning Vectors</span><span data-lang="zh" hidden>推理向量</span></h3><p><span data-lang="en">Language &amp; multimodal models</span><span data-lang="zh" hidden>语言模型与多模态模型</span></p><span class="experience-meta"><span data-lang="en">Mechanism · Transfer · Intervention</span><span data-lang="zh" hidden>机制 · 迁移 · 干预</span></span></div></article>
-      </div>
-
-      <div class="subsection research-summary">
-        <h2 class="section-title"><span data-lang="en">Research Summary</span><span data-lang="zh" hidden>研究概览</span></h2>
-        <p class="summary-intro"><span data-lang="en">I study how reasoning is represented inside generative models, and how those representations can be reused across tasks and modalities.</span><span data-lang="zh" hidden>我研究生成式模型内部如何表征推理，以及这些表征如何跨任务、跨模态复用。</span></p>
-        <div class="timeline">
-          <article class="timeline-item"><p class="timeline-meta">2025–2026</p><div><h3><a href="#cot-vectors">CoT Vectors</a></h3><p><span data-lang="en">We represent task-general, multi-step reasoning as compact vectors. Extracted and learnable variants transfer reasoning efficiently and reveal a layer-wise, three-stage organization inside LLMs.</span><span data-lang="zh" hidden>我们将任务通用的多步推理表征为紧凑向量。提取式与可学习式向量能够高效迁移推理能力，并揭示大模型内部具有层间差异的三阶段组织结构。</span></p></div></article>
-          <article class="timeline-item"><p class="timeline-meta"><span data-lang="en">2026–Present</span><span data-lang="zh" hidden>2026 年至今</span></p><div><h3><a href="#lift">LIFT</a></h3><p><span data-lang="en">We transfer linguistic Reasoning Vectors from a base LLM into its frozen vision-language counterpart. Evaluation across two VLMs and six benchmarks studies whether language-side reasoning survives multimodal scaling.</span><span data-lang="zh" hidden>我们将基础语言模型中的语言推理向量迁移到其冻结的视觉语言模型中，并在两个 VLM 与六个基准上研究语言侧推理在多模态扩展后能否继续发挥作用。</span></p></div></article>
-        </div>
+      <h2 class="section-title" id="research-title"><span data-lang="en">Research Summary</span><span data-lang="zh" hidden>研究概览</span></h2>
+      <p class="summary-intro"><span data-lang="en">I study how reasoning is represented inside generative models, and how those representations can be reused across tasks and modalities.</span><span data-lang="zh" hidden>我研究生成式模型内部如何表征推理，以及这些表征如何跨任务、跨模态复用。</span></p>
+      <div class="timeline">
+        <article class="timeline-item"><p class="timeline-meta">2025–2026</p><div><h3><a href="#cot-vectors">CoT Vectors</a></h3><p><span data-lang="en">We represent task-general, multi-step reasoning as compact vectors. Extracted and learnable variants transfer reasoning efficiently and reveal a layer-wise, three-stage organization inside LLMs.</span><span data-lang="zh" hidden>我们将任务通用的多步推理表征为紧凑向量。提取式与可学习式向量能够高效迁移推理能力，并揭示大模型内部具有层间差异的三阶段组织结构。</span></p></div></article>
+        <article class="timeline-item"><p class="timeline-meta"><span data-lang="en">2026–Present</span><span data-lang="zh" hidden>2026 年至今</span></p><div><h3><a href="#lift">LIFT</a></h3><p><span data-lang="en">We transfer linguistic Reasoning Vectors from a base LLM into its frozen vision-language counterpart. Evaluation across two VLMs and six benchmarks studies whether language-side reasoning survives multimodal scaling.</span><span data-lang="zh" hidden>我们将基础语言模型中的语言推理向量迁移到其冻结的视觉语言模型中，并在两个 VLM 与六个基准上研究语言侧推理在多模态扩展后能否继续发挥作用。</span></p></div></article>
       </div>
     </section>
 
